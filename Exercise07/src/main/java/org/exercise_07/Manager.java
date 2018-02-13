@@ -7,14 +7,19 @@ public class Manager extends Employee{
     private List<Secretary> secretaries;
     private List<Developer> developers;
 
-    public Manager(String name, int salary, List<Secretary> secretaries, List<Developer> developers) {
+    public Manager(String name, int salary) {
         super(name, salary);
+    }
+
+    public Manager(String name, int salary, List<Secretary> secretaries, List<Developer> developers) {
+        this(name, salary);
         this.secretaries = secretaries;
         this.developers = developers;
     }
 
-    public String tellDirections(String directions){
-        return "Manager " + super.getName()+ " tells:" +directions;
+    @Override
+    public String printTask() {
+        return "Manager " + super.getName()+ " tells the directions";
     }
 
     public List<Secretary> getSecretaries() {

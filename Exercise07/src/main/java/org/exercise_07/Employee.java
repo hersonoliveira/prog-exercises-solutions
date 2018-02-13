@@ -1,6 +1,6 @@
 package org.exercise_07;
 
-public class Employee {
+public abstract class Employee {
 
     private String name;
     private int salary;
@@ -9,6 +9,9 @@ public class Employee {
         this.name = name;
         this.salary = salary;
     }
+
+
+    public abstract String printTask();
 
     public String getName() {
         return name;

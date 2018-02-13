@@ -6,7 +6,8 @@ public class Secretary extends Employee{
         super(name, salary);
     }
 
-    public String orderStuff(){
+    @Override
+    public String printTask() {
         return "Secretary " + super.getName() + " is ordering stuff";
     }
 }

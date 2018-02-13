@@ -19,8 +19,9 @@ public class CEO extends Employee {
         this.developers = developers;
     }
 
-    public String tellVision(String vision){
-        return "CEO "+ super.getName()+ " vision:" + vision;
+    @Override
+    public String printTask() {
+        return "CEO "+ super.getName()+ " tells the vision";
     }
 
     public List<Secretary> getSecretaries() {

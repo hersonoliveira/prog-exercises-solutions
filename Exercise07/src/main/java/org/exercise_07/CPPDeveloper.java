@@ -7,7 +7,12 @@ public class CPPDeveloper extends Employee implements Developer {
     }
 
     @Override
+    public String printTask() {
+        return develop();
+    }
+
+    @Override
     public String develop() {
-        return "Coding C++";
+        return "Developer " + super.getName() + " is coding C++";
     }
 }

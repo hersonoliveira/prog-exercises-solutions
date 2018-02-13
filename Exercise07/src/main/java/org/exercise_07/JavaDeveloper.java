@@ -7,7 +7,12 @@ public class JavaDeveloper extends Employee implements Developer{
     }
 
     @Override
+    public String printTask() {
+        return develop();
+    }
+
+    @Override
     public String develop() {
-        return "Coding Java";
+        return "Developer " + super.getName() + " is coding Java";
     }
 }

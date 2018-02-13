@@ -1,14 +1,15 @@
 package org.exercise_07;
 
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args){
 
-        String[] names = {"Paul","John", "Robert", "Ana", "Julia", "Mary"};
+        Organisation org = new Organisation("ETH");
+        org.generateOrg();
+        System.out.println(org.printManpowerCosts());
+        org.printPersonalTasks();
 
-        System.out.println(generateSalary(1000,5000));
+
 
     }
 
