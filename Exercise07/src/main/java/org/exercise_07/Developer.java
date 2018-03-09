@@ -1,6 +1,10 @@
 package org.exercise_07;
 
-public interface Developer {
+public abstract class Developer extends Employee{
 
-    public String develop();
+    public Developer(String name, int salary) {
+        super(name, salary);
+    }
+
+    public abstract String develop();
 }

@@ -23,30 +23,37 @@ public class Organisation {
     }
 
     public void generateOrg(){
-        //1-Generate all employee
         ceo = new CEO(generateRandomName(),generateRandomInteger(30000,50000));
         employees.add(ceo);
         for(int i=0;i<generateRandomInteger(1,2);i++){
             Secretary s = new Secretary(generateRandomName(),generateRandomInteger(2000,5000));
             secretaries.add(s);
             employees.add(s);
+            ceo.setSecretaries(s);
+
         }
         for(int i=0;i<generateRandomInteger(1,10);i++){
             Manager m = new Manager(generateRandomName(),generateRandomInteger(15000,20000));
             managers.add(m);
             employees.add(m);
+            ceo.setManagers(m);
         }
+        //Java Developer
         for(int i=0;i<generateRandomInteger(1,4);i++){
             JavaDeveloper jd = new JavaDeveloper(generateRandomName(),generateRandomInteger(7000,13000));
             javaDevelopers.add(jd);
             employees.add(jd);
+            ceo.setDevelopers(jd);
         }
+        //C++ Dev
         for(int i=0;i<generateRandomInteger(1,5);i++){
             CPPDeveloper cd = new CPPDeveloper(generateRandomName(),generateRandomInteger(7000,13000));
             cppDevelopers.add(cd);
             employees.add(cd);
+            ceo.setDevelopers(cd);
         }
-        //TODO relations
+
+        allocateDevsToManagers();
     }
 
     public String printManpowerCosts(){
@@ -76,4 +83,9 @@ public class Organisation {
         String[] names = {"Paul","John", "Robert", "Ana", "Julia", "Mary"};
         return names[generateRandomInteger(0,names.length-1)];
     }
+
+    private static void allocateDevsToManagers(){
+
+    }
+
 }

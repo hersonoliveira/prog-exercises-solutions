@@ -1,6 +1,6 @@
 package org.exercise_07;
 
-public class CPPDeveloper extends Employee implements Developer {
+public class CPPDeveloper extends Developer {
 
     public CPPDeveloper(String name, int salary) {
         super(name, salary);

@@ -1,6 +1,6 @@
 package org.exercise_07;
 
-public class JavaDeveloper extends Employee implements Developer{
+public class JavaDeveloper extends Developer{
 
     public JavaDeveloper(String name, int salary) {
         super(name, salary);

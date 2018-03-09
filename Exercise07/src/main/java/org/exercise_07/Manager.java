@@ -1,5 +1,6 @@
 package org.exercise_07;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Manager extends Employee{
@@ -9,12 +10,8 @@ public class Manager extends Employee{
 
     public Manager(String name, int salary) {
         super(name, salary);
-    }
-
-    public Manager(String name, int salary, List<Secretary> secretaries, List<Developer> developers) {
-        this(name, salary);
-        this.secretaries = secretaries;
-        this.developers = developers;
+        secretaries = new ArrayList<>();
+        developers = new ArrayList<>();
     }
 
     @Override
@@ -26,15 +23,15 @@ public class Manager extends Employee{
         return secretaries;
     }
 
-    public void setSecretaries(List<Secretary> secretaries) {
-        this.secretaries = secretaries;
-    }
-
     public List<Developer> getDevelopers() {
         return developers;
     }
 
-    public void setDevelopers(List<Developer> developers) {
-        this.developers = developers;
+    public void setSecretaries(Secretary secretary) {
+        secretaries.add(secretary);
+    }
+
+    public void setDevelopers(Developer dev) {
+        developers.add(dev);
     }
 }
